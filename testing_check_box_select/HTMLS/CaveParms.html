@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang = "en-us">
+
+<head>
+<meta charset="utf-8" />
+<title>Number Guess - Lesson 1</title>
+<meta name="description" content="Number Guess - Lesson 1. Version 1.0" />
+<meta name="author" content="The Gamer's Guide to Coding" />
+<meta name="dcterms.rights" content="https://creativecommons.org/licenses/by-sa/4.0/" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../included.js"></script>
+</head>
+
+<style>
+.multiselect {
+  width: 350px;
+}
+
+.selectBox {
+  position: relative;
+  width: 350px;
+}
+
+.selectBox select {
+  width: 100%;
+  font-weight: bold;
+}
+
+.overSelect {
+  position: absolute;
+  width: 350px
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#checkboxes {
+  display: none;
+  border: 1px #dadada solid;
+}
+
+#checkboxes label {
+  display: block;
+}
+
+#checkboxes label:hover {
+  background-color: #1e90ff;
+}
+#DisplayCaveInfo {
+     white-space: pre;
+     color: black;
+   }
+.full-height {
+  height: 50000000000000%;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.yellowbackground {
+     width: max-width;
+     background-color: #71c7ec;
+     opacity: 1.0;
+     font-size: 36px;
+     overflow: hidden;
+     position:relative;
+     border-style: solid;
+     border-width: 2.5px 0px 2.5px 0px;
+ border-color: black;
+   }
+.greenbackground {
+  width: max-width;
+  background-color: #71c7ec; #1ebbd7;
+  opacity: 1.0;
+  font-size: 36px;
+  overflow: hidden;
+  z-index: -100;
+  position:relative;
+  border-style: solid;
+border-width:  2.5px 0px 2.5px 0px;
+ border-color: black;
+}
+.large {
+  transform: Scale(3);
+}
+@$input.number {
+           thickness: ".2",
+           readOnly: true,
+           width: "60%",
+           height: "60%",
+           angleArc: 250,
+           angleOffset: -125,
+           parse: function (v) {return parseInt(v);},
+           format: function (v) {return v + "%";}
+       }
+#ErrorFloorNum {
+        width: 330px;
+        background-color: #ff0000;
+        opacity: 0.0;
+        font-size: 18px;
+        overflow: hidden;
+        z-index: 100;
+        position:relative;
+      }
+.percent {
+
+}
+p {
+   white-space: pre;
+}
+</style>
+
+<body onload="CreateCheckBoxCaveUnits(); setInterval(CheckUseGatesCheckBox, 200); RadioTest();"> <!-- has magical setinterval -->
+  <form style="position:absolute; opacity: 0;">
+    <div class="multiselect">
+      <div class="selectBox" onclick="showCheckboxes()">
+        <select disabled>
+          <option id="Display Select">No Cave Units Yet</option>
+        </select>
+        <div class="overSelect"></div>
+      </div>
+      <div id="checkboxes">
+  <!--     this is where the CaveInfoStrings go
+      <label for="one">
+       <input type="checkbox" id="one" />First checkbox</label> -->
+      </div>
+    </div>
+  </form>
+
+<input id="UseGatesCheckBox" type="checkbox" style="position:absolute; margin-top: 120px; margin-left:400px" />
+
+<form style="transform: Scale(2); font-size: 10px; position:absolute; margin-top: 200px; margin-left: 500px; z-index: 100;">
+  <input type="radio" name="genderS" value="1" checked="checked">Male</input>
+  <input type="radio" name="genderS" value="0">Female</input>
+</form>
+<!-- background stuff -->
+<p style="position:absolute; margin-top: 200px; margin-left: 50px;"><a href="file:///C:/.gen%20editor/javascript/testing_check_box_select/bob.txt">Visit our HTML tutorial</a></p>
+<div class="yellowbackground" class="full-height" style="height: 300px; margin-top: 0px; margin-left:0px;">Welcome to Mr. Brocoli's Cave Randomiser website! To Change the settings of the
+cave randomiser click on the blue text! </div>
+<div class="greenbackground" class="full-height" style="height: 300px; margin-top: 0px; margin-left:0px;">F002: THE ENEMIES CATEGORY
+<p><input type="image" src="../image/F002.jpg" style="position:absolute; margin-left: 1200px; margin-top: -50px; width: 300px" alt="Submit"></p>
+</div>
+<div class="yellowbackground" class="full-height" style="height: 300px; margin-top: 0px; margin-left:0px;">F003: THE TREASURES CATEGORY
+<p><input type="image" src="../image/F003.png" style="display: inline; position:absolute; margin-left: 1200px; margin-top: -50px; width: 300px" alt="Submit"></p>
+<form style="font-size: 14px; position:absolute; margin-left: 20px; margin-top: 0px; display:inline;">
+<p style="display:inline;">Common Enemies</p>
+<input type="text" class="percent" maxlength='4' value="50%" style="display:inline;" />
+<input class="number-limited" type="number" value="1" min="10" max="5555" style="display:inline;" />
+</form>
+<form style="font-size: 14px; position:absolute; margin-left: 20px; margin-top: 50px;">
+</form>
+</div>
+<div class="greenbackground" class="full-height" style="height: 300px; margin-top: 0px; margin-left:0px;">F004: THE GATES CATEGORY
+<p><input type="image" src="../image/F004.png" style="display: inline; position:absolute; margin-left: 1200px; margin-top: -50px; width: 300px" alt="Submit"></p>
+</div>
+<div class="yellowbackground" class="full-height" style="height: 300px; margin-top: 0px; margin-left:0px;">F005: THE NUMBER OF ROOMS CATEGORY
+<p><input type="image" src="../image/F005.png" style="display: inline; position:absolute; margin-left: 1200px; margin-top: -50px; width: 300px" alt="Submit"></p>
+</div>
+<div class="yellowbackground" class="full-height" style="height: 300px; margin-top: 0px; margin-left:0px;">F006: THE CORRIDORS PROBABILITY CATEGORY </div>
+<div class="greenbackground" class="full-height" style="height: 300px; margin-top: 0px; margin-left:0px;">F007: THE "DOES THIS FLOOR HAVE A GEYSER" CATEGORY </div>
+<div class="yellowbackground" class="full-height" style="height: 300px; margin-top: 0px; margin-left:0px;">F008: THE "CAVE UNIT FILE" CATEGORY </div>
+<div class="greenbackground" class="full-height" style="height: 300px; margin-top: 0px; margin-left:0px;">F009: THE "CAVE LIGHTING FILE" CATEGORY </div>
+<div class="yellowbackground" class="full-height" style="height: 300px; margin-top: 0px; margin-left:0px;">F00A: THE "CAVE SKYBOX" CATEGORY </div>
+<div class="greenbackground" class="full-height" style="height: 300px; margin-top: 0px; margin-left:0px;">F010: THE "IS THIS FLOORS HOLE CLOGGED" CATEGORY </div>
+<div class="yellowbackground" class="full-height" style="height: 300px; margin-top: 0px; margin-left:0px;">F011: THE ECHO STRENTGH CATEGORY </div>
+<div class="greenbackground" class="full-height" style="height: 300px; margin-top: 0px; margin-left:0px;">F014: THE CAP PROBILITY CATEGORY (F012 AND F013 ARE DOLTS!) </div>
+<div class="yellowbackground" class="full-height" style="height: 300px; margin-top: 0px; margin-left:0px;">F015: THE CAP INFO CATEGORY </div>
+<div class="greenbackground" class="full-height" style="height: 300px; margin-top: 0px; margin-left:0px;">F016: THE WATER WRAITH CATEGORY </div>
+<div class="yellowbackground" class="full-height" style="height: 300px; margin-top: 0px; margin-left:0px;">F017: THE SEE SAW CATEGORY </div>
+<script>
+//I STOLE THIS WHOLE CODE AND RE MADE IT TO DO WHAT I WANT!
+document.querySelector('.percent').addEventListener('input', function(e){
+  //Separate the percent sign from the number:
+  let int = e.target.value.slice(0, e.target.value.length - 1);
+
+  /* If there is no number (just the percent sign), rewrite
+     it so it persists and move the cursor just before it.*/
+  if (int.includes('%') || isNaN(int)) {
+    e.target.value = '%';
+  }
+
+  /* If the whole has been written and we are starting the
+     fraction rewrite to include the decimal point and percent
+     sign. The fraction is a sigle digit. Cursor is moved to
+     just ahead of this digit.*/
+  else if(int.length >= 3 && int.length <= 4){
+    e.target.value = int.slice(0,2) + int.slice(2,3) + '%';
+    if(int.slice(0,2) + int.slice(2,3) > 100) {
+        e.target.value = 100 + "%";
+      }
+    e.target.setSelectionRange(4, 4);
+  }
+  else {
+   e.target.value = int + '%';
+   e.target.setSelectionRange(e.target.value.length-1, e.target.value.length-1);
+  }
+});
+
+document.querySelector('.number-limited').addEventListener('input', function(e){
+  InputNumberLimit(e);
+});
+</script>
+
+</body>
+
+</html>

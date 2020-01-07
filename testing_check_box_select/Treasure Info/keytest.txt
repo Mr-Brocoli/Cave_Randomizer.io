@@ -1,0 +1,68 @@
+#--------------------------------------------------
+#	お宝定義ファイル
+#--------------------------------------------------
+2	# size of configs
+{
+	name		fue_a
+	archive		fue_a.szs
+	bmd		eq_pwr_punch.bmd
+	animmgr		animmgr.txt
+	colltree		collInfo.txt
+	radius		20
+	p_radius		15
+	height		18
+	inertiascaling		230
+	particletype		simple
+	numparticles		4
+	particlesize		1.0
+	friction		0.1
+	min		15
+	max		25
+	pikicountmax		0
+	pikicountmin		0
+	dynamics		lod
+	money		100
+	unique		yes
+	depth		0
+	depth_max		70
+	depth_a		20
+	depth_b		20
+	depth_c		20
+	depth_d		20
+	message		0009_00
+	code	0
+	dictionary	188
+	end
+}
+{
+	name		key
+	archive		key.szs
+	bmd		test_key.bmd
+	animmgr		animmgr.txt
+	colltree		collInfo.txt
+	radius		15
+	p_radius		12
+	height		8
+	inertiascaling		50
+	particletype		simple
+	numparticles		0
+	particlesize		1.0
+	friction		0.1
+	min		1
+	max		3
+	pikicountmax		0
+	pikicountmin		0
+	dynamics		never
+	money		100
+	unique		yes
+	depth		0
+	depth_max		40
+	depth_a		10
+	depth_b		35
+	depth_c		35
+	depth_d		35
+	message		0021_00
+	code	1
+	dictionary	196
+	end
+}

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang = "en-us">
+
+<head>
+<meta charset="utf-8" />
+<title>Number Guess - Lesson 1</title>
+<meta name="description" content="Number Guess - Lesson 1. Version 1.0" />
+<meta name="author" content="The Gamer's Guide to Coding" />
+<meta name="dcterms.rights" content="https://creativecommons.org/licenses/by-sa/4.0/" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../included.js"></script>
+<script src="../DefaultTreasures.js"></script>
+</head>
+
+<style>
+.multiselect {
+  width: 350px;
+}
+
+.selectBox {
+  position: relative;
+  width: 350px;
+}
+
+.selectBox select {
+  width: 100%;
+  font-weight: bold;
+}
+
+.overSelect {
+  position: absolute;
+  width: 350px
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+#checkboxes {
+  display: none;
+  border: 1px #dadada solid;
+}
+
+#checkboxes label {
+  display: block;
+}
+
+#checkboxes label:hover {
+  background-color: #1e90ff;
+}
+#DisplayCaveInfo {
+     white-space: pre;
+     color: black;
+   }
+.full-height {
+  height: 50000000000000%;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.yellowbackground {
+  width: max-width;
+  background-color: #00ff00;
+  opacity: 1.0;
+  font-size: 36px;
+  overflow: hidden;
+  z-index: 100;
+  position:relative;
+}
+.greenbackground {
+  width: max-width;
+  background-color: #71c7ec; #1ebbd7;
+  opacity: 1.0;
+  font-size: 36px;
+  overflow: hidden;
+  z-index: -100;
+  position:relative;
+  border-style: solid;
+border-width:  2.5px 0px 2.5px 0px;
+ border-color: black;
+}
+.large {
+  transform: Scale(3);
+}
+#ErrorFloorNum {
+        width: 330px;
+        background-color: #ff0000;
+        opacity: 0.0;
+        font-size: 18px;
+        overflow: hidden;
+        z-index: 100;
+        position:relative;
+      }
+</style>
+
+<body onload="SetTreasureListPrint();"> <!-- has magical setinterval -->
+  <form style="position:absolute; opacity: 0;">
+    <div class="multiselect">
+      <div class="selectBox" onclick="showCheckboxes()">
+        <select disabled>
+          <option id="Display Select">No Cave Units Yet</option>
+        </select>
+        <div class="overSelect"></div>
+      </div>
+      <div id="checkboxes">
+  <!--     this is where the CaveInfoStrings go
+      <label for="one">
+       <input type="checkbox" id="one" />First checkbox</label> -->
+      </div>
+    </div>
+  </form>
+
+<!-- background stuff -->
+
+<div class="yellowbackground" class="full-height" style="height: 10000px; margin-top: 0px; margin-left:0px;">Add a Treasure List from Pikmin 2!
+<p id="TreasureListPrintError" style="margin-left: 10px; font-size: 14px; margin-top: 60px;">I am just some text <strong>for now</strong></p>
+
+<div style="z-index: 100; margin-left: 500px; margin-top: -50px; transform: Scale(1.1)" onsubmit="event.preventDefault(); loadFile()">
+  <input type="file" accept=".txt" id="fileinput"></input>
+  <input type="button" value="Overwrite List" onclick="ResetCurrTreasure(); loadFile();"></button>
+  <input type="button" value="Append to List" onclick="loadFile();"></button>
+</div>
+
+<p style="margin-left: 10px; font-size: 18px; margin-top: 60px; position:absolute; z-index: 102; margin-left: 1100px; margin-top: 000px;">*This page is for parsing these files from Pikmin 2</p>
+<p><input type="image" src="../image/SampleOtakara.png" style="position:absolute; z-index: 101; margin-left: 1100px; margin-top: 000px; width: 150px"></p>
+<div id="TreasureListPrint" style="margin-left: 450px; font-size: 14px; margin-top: 10px;">
+</div>
+<script>
+  function ResetCurrTreasure() {
+    localStorage.CurrTreasure = 1;
+    RemoveAllLabels("TreasureListPrint"); // removes all children or whatever
+    var Treasures = [];
+    localStorage.setItem("Treasures", JSON.stringify(Treasures));
+  }
+  function loadFile() {
+    const file = document.getElementById('fileinput').files[0]
+    if (file === undefined) {
+      document.getElementById("TreasureListPrintError").innerHTML = "PLEASE SELECT A FILE FIRSTTTTTTTTTTT!!!!!";
+    }
+    const fr = new FileReader()
+    fr.onload = e => handleText(e.target.result)
+    fr.readAsText(file)
+  }
+
+  var TreasureListPrint = document.getElementById('TreasureListPrint');
+  // LocalStorage.CurrTreasure is in this function
+  function handleText(TreasureList, DoResetCurrTreasure) {
+    var Treasures = JSON.parse(localStorage["Treasures"]);
+    var end = "end";
+    var TreasureName = "name";
+    var CarryMinimum = "min";
+    var PokoAmount = "money";
+    var IsBuried = "depth";
+    var DataLoc = 0;
+    if(localStorage.CurrTreasure == "undefined") {localStorage.CurrTreasure = 1;}
+
+    for(var CurrTreasure = localStorage.CurrTreasure; DataLoc < TreasureList.length; CurrTreasure++) {
+    DataLoc = FindStringInString(TreasureName, TreasureList, DataLoc, end);
+    var Dobreak = CheckDataLoc("\"TreasureName\"", DataLoc, CurrTreasure);
+    if(Dobreak == "break") {break;}
+    DataLoc += TreasureName.length;
+    var AppendTreasureName = GetProperData(TreasureList, DataLoc);
+
+    DataLoc = FindStringInString(CarryMinimum, TreasureList, DataLoc, end);
+    Dobreak = CheckDataLoc("\"CarryMinimum\"", DataLoc, CurrTreasure);
+    if(Dobreak == "break") {break;}
+    DataLoc += CarryMinimum.length;
+    var AppendCarryMinimum = GetProperData(TreasureList, DataLoc);
+
+    DataLoc = FindStringInString(PokoAmount, TreasureList, DataLoc, end);
+    Dobreak = CheckDataLoc("\"PokoAmount\"", DataLoc, CurrTreasure);
+    if(Dobreak == "break") {break;}
+    DataLoc += PokoAmount.length;
+    var AppendPokoAmount = GetProperData(TreasureList, DataLoc);
+
+    DataLoc = FindStringInString(IsBuried, TreasureList, DataLoc, end);
+    Dobreak = CheckDataLoc("\"IsBuried\"", DataLoc, CurrTreasure);
+    if(Dobreak == "break") {break;}
+    DataLoc += IsBuried.length;
+    var AppendIsBuried = GetProperData(TreasureList, DataLoc);
+    if(AppendIsBuried == "0")
+    {
+      AppendIsBuried = "False";
+    } else {
+      AppendIsBuried = "True";
+    }
+
+    TreasureListAppendP(AppendTreasureName, AppendCarryMinimum, AppendPokoAmount, AppendIsBuried);
+    var NewTreasure = new TreasureInfo(AppendTreasureName, AppendCarryMinimum, AppendPokoAmount, AppendIsBuried);
+    Treasures.push(NewTreasure);
+    DataLoc = FindStringInString(end, TreasureList, DataLoc, "PORTY");
+    DataLoc += end.length;
+    localStorage.CurrTreasure = CurrTreasure;
+  }
+  localStorage.setItem("Treasures", JSON.stringify(Treasures));
+}
+function TreasureListAppendP(AppendTreasureName, AppendCarryMinimum, AppendPokoAmount, AppendIsBuried) {
+  var p = document.createElement("p");
+  p.innerHTML = "Treasure name: " + AppendTreasureName + " | Minimum Pikmin to carry: " + AppendCarryMinimum + " | Poko amount: " + AppendPokoAmount + " | Buried: " + AppendIsBuried;
+  TreasureListPrint.appendChild(p);
+}
+function CheckDataLoc(errorname, dataloc, currtreasure)
+{
+    if (dataloc <= -1)
+    {
+       OnTreasureListError(errorname, dataloc, currtreasure); return "break";
+     }
+     return '';
+}
+function OnTreasureListError(ErrorName, ErrorType, CurrTreasure) {
+  var p = document.getElementById("TreasureListPrintError");
+  if(ErrorType == -2) {
+     p.innerHTML = "Hit end of file while finding: " + ErrorName + " in Treasure NUMBER: " + CurrTreasure;
+  }
+  else
+  {
+    p.innerHTML = "Error while Finding: " + ErrorName + " in Treasure ID: " + CurrTreasure;
+  }
+}
+
+  function FindStringInString(str1, filestr, find, end) {
+    for(find = find; find < filestr.length; find++) {
+      var DidFind = strncmpbrocoli(str1, filestr, find);
+      if(DidFind == 0) {return find;}
+      DidFind = strncmpbrocoli(end, filestr, find);
+      if(DidFind == 0) {return -1;}
+    }
+    console.log("Did not find str1: " + str1 + " or end: "  + end);
+    return -2;
+  }
+  function strncmpbrocoli(str1, str2, start) {
+  str2 = str2.substring(start, str1.length + start);
+  return ( ( str1 == str2 ) ? 0 :
+                              (( str1 > str2 ) ? 1 : -1 ));
+}
+
+function GetProperData(string, loc) {
+  while(true) {
+    var isData = string.charCodeAt(loc);
+    if(isData >= 0x21) {break;}
+    loc++;
+  }
+  var startslice = loc;
+  loc++;
+  while(true) {
+    var isntData = string.charCodeAt(loc);
+    if(isntData <= 0x21) {break;}
+    loc++;
+  }
+  return string.slice(startslice, loc);
+}
+
+function SetTreasureListPrint() {
+  var Treasures = JSON.parse(localStorage["Treasures"]);
+  if(Treasures.length == 0)
+  {
+    console.log("USING AND SETTING DEFAULT TREASURE LIST!");
+    Treasures = JSON.parse(TreasureListDefault);
+    localStorage.setItem("Treasures", JSON.stringify(Treasures));
+  }
+   for(var i = 0; i < Treasures.length; i++) {
+     var p = document.createElement("p");
+     p.innerHTML = "Treasure name: " + Treasures[i].Name + " | Minimum Pikmin to carry: " + Treasures[i].CarryMin  + " | Poko amount: " + Treasures[i].Poko + " | Buried: " + Treasures[i].IsBuried;
+     TreasureListPrint.appendChild(p);
+   }
+}
+
+</script>
+</body>
+
+</script>
+</html>

@@ -1,0 +1,992 @@
+# CaveInfo 
+{
+	{c000} 4 10 	# ŠK‘w
+	{_eof} 
+}
+10 # FloorInfo
+{
+	{f000} 4 0
+	{f001} 4 0
+	{f002} 4 100
+	{f003} 4 8
+	{f004} 4 100
+	{f005} 4 3
+	{f006} 4 0.01
+	{f007} 4 0
+	{f008} -1 4_MAT_mid2_nor4_ike1_sak2_tsuchi.txt
+	{f009} -1 metal_light_lv2.ini
+	{f00A} -1 test
+	{f010} 4 0
+	{f011} 4 0
+	{f012} 4 0
+	{f013} 4 0
+	{f014} 4 50
+	{f015} 4 1
+	{f016} 4 0
+	{f017} 4 0
+	{_eof}
+}
+# TekiInfo
+{
+	3
+	Kochappy	20
+	0
+	Tank_key	10
+	1
+	Tank	20
+	1
+}
+# ItemInfo
+{
+	8
+	bird_hane	10
+	juji_key_fc	10
+	g_futa_kyosin	10
+	denchi_3_red	10
+	yoyo_yellow	10
+	flower_blue	10
+	leaf_yellow	10
+	be_dama_yellow_l	10
+}
+# GateInfo
+{
+	0
+}
+# FloorInfo
+{
+	{f000} 4 1
+	{f001} 4 1
+	{f002} 4 100
+	{f003} 4 8
+	{f004} 4 100
+	{f005} 4 3
+	{f006} 4 0.01
+	{f007} 4 0
+	{f008} -1 2_units_cent_mid2_tsuchi.txt
+	{f009} -1 vs_2_light.ini
+	{f00A} -1 test
+	{f010} 4 0
+	{f011} 4 0
+	{f012} 4 0
+	{f013} 4 0
+	{f014} 4 50
+	{f015} 4 1
+	{f016} 4 0
+	{f017} 4 0
+	{_eof}
+}
+# TekiInfo
+{
+	3
+	UjiA	40
+	0
+	Armor_key	10
+	1
+	ElecBug	30
+	1
+}
+# ItemInfo
+{
+	8
+	diamond_red	10
+	nut_l	10
+	turi_uki	10
+	otama	10
+	kan_iwate	10
+	bell_yellow	10
+	suit_fire	10
+	toy_ring_a_blue	10
+}
+# GateInfo
+{
+	0
+}
+# FloorInfo
+{
+	{f000} 4 2
+	{f001} 4 2
+	{f002} 4 100
+	{f003} 4 8
+	{f004} 4 100
+	{f005} 4 3
+	{f006} 4 0.01
+	{f007} 4 0
+	{f008} -1 2_ABE_blk_cent2_tsuchi.txt
+	{f009} -1 forest_3_light.ini
+	{f00A} -1 test
+	{f010} 4 0
+	{f011} 4 0
+	{f012} 4 0
+	{f013} 4 0
+	{f014} 4 50
+	{f015} 4 1
+	{f016} 4 0
+	{f017} 4 0
+	{_eof}
+}
+# TekiInfo
+{
+	3
+	Kochappy	60
+	0
+	Jigumo_key	10
+	1
+	KumaKochappy	40
+	1
+}
+# ItemInfo
+{
+	8
+	toy_ring_b_blue	10
+	nut_l	10
+	bird_hane	10
+	makigai	10
+	dia_b_green	10
+	be_dama_red_l	10
+	tel_dial	10
+	g_futa_daisen	10
+}
+# GateInfo
+{
+	0
+}
+# FloorInfo
+{
+	{f000} 4 3
+	{f001} 4 3
+	{f002} 4 100
+	{f003} 4 8
+	{f004} 4 100
+	{f005} 4 3
+	{f006} 4 0.01
+	{f007} 4 0
+	{f008} -1 1_MAT_north_tsuchi.txt
+	{f009} -1 suityu_light_lv4.ini
+	{f00A} -1 test
+	{f010} 4 0
+	{f011} 4 0
+	{f012} 4 0
+	{f013} 4 0
+	{f014} 4 50
+	{f015} 4 1
+	{f016} 4 0
+	{f017} 4 0
+	{_eof}
+}
+# TekiInfo
+{
+	3
+	Sokkuri	80
+	0
+	Fkabuto_key	10
+	1
+	Kabuto	10
+	1
+}
+# ItemInfo
+{
+	8
+	baum_kuchen	10
+	g_futa_kyusyu	10
+	donutschoco_s	10
+	channel	10
+	baum_kuchen	10
+	futa_a_gold	10
+	be_dama_blue	10
+	denchi_3_red	10
+}
+# GateInfo
+{
+	0
+}
+# FloorInfo
+{
+	{f000} 4 4
+	{f001} 4 4
+	{f002} 4 100
+	{f003} 4 8
+	{f004} 4 100
+	{f005} 4 3
+	{f006} 4 0.01
+	{f007} 4 0
+	{f008} -1 all_units_conc.txt
+	{f009} -1 sniper_light_lv0.ini
+	{f00A} -1 test
+	{f010} 4 0
+	{f011} 4 0
+	{f012} 4 0
+	{f013} 4 0
+	{f014} 4 50
+	{f015} 4 1
+	{f016} 4 0
+	{f017} 4 0
+	{_eof}
+}
+# TekiInfo
+{
+	3
+	Kochappy	100
+	0
+	Hana_key	10
+	1
+	Wtank	20
+	1
+}
+# ItemInfo
+{
+	8
+	suit_fire	10
+	donutswhite	10
+	toy_ring_b_red	10
+	gum_tape_s	10
+	compact	10
+	g_futa_kyodo	10
+	kan_b_gold	10
+	donutswhite	10
+}
+# GateInfo
+{
+	0
+}
+# FloorInfo
+{
+	{f000} 4 5
+	{f001} 4 5
+	{f002} 4 100
+	{f003} 4 8
+	{f004} 4 100
+	{f005} 4 3
+	{f006} 4 0.01
+	{f007} 4 0
+	{f008} -1 1_units_nobo2_metal.txt
+	{f009} -1 sniper_light_lv0.ini
+	{f00A} -1 test
+	{f010} 4 0
+	{f011} 4 0
+	{f012} 4 0
+	{f013} 4 0
+	{f014} 4 50
+	{f015} 4 1
+	{f016} 4 0
+	{f017} 4 0
+	{_eof}
+}
+# TekiInfo
+{
+	3
+	UjiA	120
+	0
+	Fkabuto_key	10
+	1
+	Frog	30
+	1
+}
+# ItemInfo
+{
+	8
+	ichigo_l	10
+	sinkukan_b	10
+	kuri	10
+	baum_kuchen_s	10
+	tape_blue	10
+	donutsichigo	10
+	bane_yellow	10
+	juji_key_fc	10
+}
+# GateInfo
+{
+	0
+}
+# FloorInfo
+{
+	{f000} 4 6
+	{f001} 4 6
+	{f002} 4 100
+	{f003} 4 8
+	{f004} 4 100
+	{f005} 4 3
+	{f006} 4 0.01
+	{f007} 4 0
+	{f008} -1 1_units_cent_tsuchi.txt
+	{f009} -1 hiroba_light.ini
+	{f00A} -1 test
+	{f010} 4 0
+	{f011} 4 0
+	{f012} 4 0
+	{f013} 4 0
+	{f014} 4 50
+	{f015} 4 1
+	{f016} 4 0
+	{f017} 4 0
+	{_eof}
+}
+# TekiInfo
+{
+	3
+	Tadpole	140
+	0
+	MaroFrog_key	10
+	1
+	Kabuto	40
+	1
+}
+# ItemInfo
+{
+	8
+	chess_queen_black	10
+	bell	10
+	nut	10
+	denchi_1_black	10
+	denchi_2_black	10
+	futa_a_gold	10
+	loozy	10
+	chocoichigo	10
+}
+# GateInfo
+{
+	0
+}
+# FloorInfo
+{
+	{f000} 4 7
+	{f001} 4 7
+	{f002} 4 100
+	{f003} 4 8
+	{f004} 4 100
+	{f005} 4 3
+	{f006} 4 0.01
+	{f007} 4 0
+	{f008} -1 vs_8_spiral_conc.txt
+	{f009} -1 metal_light_lv2.ini
+	{f00A} -1 test
+	{f010} 4 0
+	{f011} 4 0
+	{f012} 4 0
+	{f013} 4 0
+	{f014} 4 50
+	{f015} 4 1
+	{f016} 4 0
+	{f017} 4 0
+	{_eof}
+}
+# TekiInfo
+{
+	3
+	TamagoMushi	160
+	0
+	Error_key	10
+	1
+	Error	10
+	1
+}
+# ItemInfo
+{
+	8
+	donguri_l	10
+	suit_powerup	10
+	radar_b	10
+	be_dama_red_l	10
+	bane_blue	10
+	donguri_l	10
+	donutschoco_s	10
+	j_block_green	10
+}
+# GateInfo
+{
+	0
+}
+# FloorInfo
+{
+	{f000} 4 8
+	{f001} 4 8
+	{f002} 4 100
+	{f003} 4 8
+	{f004} 4 100
+	{f005} 4 3
+	{f006} 4 0.01
+	{f007} 4 0
+	{f008} -1 1_units_mid2_snow.txt
+	{f009} -1 chikahimi_metal_light_lv4.ini
+	{f00A} -1 test
+	{f010} 4 0
+	{f011} 4 0
+	{f012} 4 0
+	{f013} 4 0
+	{f014} 4 50
+	{f015} 4 1
+	{f016} 4 0
+	{f017} 4 0
+	{_eof}
+}
+# TekiInfo
+{
+	3
+	Tank	60
+	0
+	Error_key	10
+	1
+	Error	20
+	1
+}
+# ItemInfo
+{
+	8
+	toy_ring_b_green	10
+	leaf_yellow	10
+	bane_yellow	10
+	mojiban	10
+	kinoko_tubu	10
+	uji_jisyaku	10
+	denchi_3_red	10
+	tape_yellow	10
+}
+# GateInfo
+{
+	0
+}
+# FloorInfo
+{
+	{f000} 4 9
+	{f001} 4 9
+	{f002} 4 100
+	{f003} 4 8
+	{f004} 4 100
+	{f005} 4 3
+	{f006} 4 0.01
+	{f007} 4 0
+	{f008} -1 vs_6_nobo_metal.txt
+	{f009} -1 hiroba_light.ini
+	{f00A} -1 test
+	{f010} 4 0
+	{f011} 4 0
+	{f012} 4 0
+	{f013} 4 0
+	{f014} 4 50
+	{f015} 4 1
+	{f016} 4 0
+	{f017} 4 0
+	{_eof}
+}
+# TekiInfo
+{
+	3
+	Kurage	80
+	0
+	Error_key	10
+	1
+	Error	30
+	1
+}
+# ItemInfo
+{
+	8
+	toy_ring_b_red	10
+	cookie_u	10
+	teala_dia_b	10
+	water	10
+	denchi_2_red	10
+	baum_kuchen_s	10
+	diamond_green_l	10
+	g_futa_sakotani	10
+}
+# GateInfo
+{
+	0
+}
+ 
+# CaveInfo 
+{
+	{c000} 4 10 	# ŠK‘w
+	{_eof} 
+}
+10 # FloorInfo
+{
+	{f000} 4 0
+	{f001} 4 0
+	{f002} 4 100
+	{f003} 4 8
+	{f004} 4 100
+	{f005} 4 3
+	{f006} 4 0.01
+	{f007} 4 0
+	{f008} -1 4_MAT_mid2_nor4_ike1_sak2_tsuchi.txt
+	{f009} -1 metal_light_lv2.ini
+	{f00A} -1 test
+	{f010} 4 0
+	{f011} 4 0
+	{f012} 4 0
+	{f013} 4 0
+	{f014} 4 50
+	{f015} 4 1
+	{f016} 4 0
+	{f017} 4 0
+	{_eof}
+}
+# TekiInfo
+{
+	3
+	Kochappy	20
+	0
+	Tank_key	10
+	1
+	Tank	20
+	1
+}
+# ItemInfo
+{
+	8
+	bird_hane	10
+	juji_key_fc	10
+	g_futa_kyosin	10
+	denchi_3_red	10
+	yoyo_yellow	10
+	flower_blue	10
+	leaf_yellow	10
+	be_dama_yellow_l	10
+}
+# GateInfo
+{
+	0
+}
+# FloorInfo
+{
+	{f000} 4 1
+	{f001} 4 1
+	{f002} 4 100
+	{f003} 4 8
+	{f004} 4 100
+	{f005} 4 3
+	{f006} 4 0.01
+	{f007} 4 0
+	{f008} -1 2_units_cent_mid2_tsuchi.txt
+	{f009} -1 vs_2_light.ini
+	{f00A} -1 test
+	{f010} 4 0
+	{f011} 4 0
+	{f012} 4 0
+	{f013} 4 0
+	{f014} 4 50
+	{f015} 4 1
+	{f016} 4 0
+	{f017} 4 0
+	{_eof}
+}
+# TekiInfo
+{
+	3
+	UjiA	40
+	0
+	Armor_key	10
+	1
+	ElecBug	30
+	1
+}
+# ItemInfo
+{
+	8
+	diamond_red	10
+	nut_l	10
+	turi_uki	10
+	otama	10
+	kan_iwate	10
+	bell_yellow	10
+	suit_fire	10
+	toy_ring_a_blue	10
+}
+# GateInfo
+{
+	0
+}
+# FloorInfo
+{
+	{f000} 4 2
+	{f001} 4 2
+	{f002} 4 100
+	{f003} 4 8
+	{f004} 4 100
+	{f005} 4 3
+	{f006} 4 0.01
+	{f007} 4 0
+	{f008} -1 2_ABE_blk_cent2_tsuchi.txt
+	{f009} -1 forest_3_light.ini
+	{f00A} -1 test
+	{f010} 4 0
+	{f011} 4 0
+	{f012} 4 0
+	{f013} 4 0
+	{f014} 4 50
+	{f015} 4 1
+	{f016} 4 0
+	{f017} 4 0
+	{_eof}
+}
+# TekiInfo
+{
+	3
+	Kochappy	60
+	0
+	Jigumo_key	10
+	1
+	KumaKochappy	40
+	1
+}
+# ItemInfo
+{
+	8
+	toy_ring_b_blue	10
+	nut_l	10
+	bird_hane	10
+	makigai	10
+	dia_b_green	10
+	be_dama_red_l	10
+	tel_dial	10
+	g_futa_daisen	10
+}
+# GateInfo
+{
+	0
+}
+# FloorInfo
+{
+	{f000} 4 3
+	{f001} 4 3
+	{f002} 4 100
+	{f003} 4 8
+	{f004} 4 100
+	{f005} 4 3
+	{f006} 4 0.01
+	{f007} 4 0
+	{f008} -1 1_MAT_north_tsuchi.txt
+	{f009} -1 suityu_light_lv4.ini
+	{f00A} -1 test
+	{f010} 4 0
+	{f011} 4 0
+	{f012} 4 0
+	{f013} 4 0
+	{f014} 4 50
+	{f015} 4 1
+	{f016} 4 0
+	{f017} 4 0
+	{_eof}
+}
+# TekiInfo
+{
+	3
+	Sokkuri	80
+	0
+	Fkabuto_key	10
+	1
+	Kabuto	10
+	1
+}
+# ItemInfo
+{
+	8
+	baum_kuchen	10
+	g_futa_kyusyu	10
+	donutschoco_s	10
+	channel	10
+	baum_kuchen	10
+	futa_a_gold	10
+	be_dama_blue	10
+	denchi_3_red	10
+}
+# GateInfo
+{
+	0
+}
+# FloorInfo
+{
+	{f000} 4 4
+	{f001} 4 4
+	{f002} 4 100
+	{f003} 4 8
+	{f004} 4 100
+	{f005} 4 3
+	{f006} 4 0.01
+	{f007} 4 0
+	{f008} -1 all_units_conc.txt
+	{f009} -1 sniper_light_lv0.ini
+	{f00A} -1 test
+	{f010} 4 0
+	{f011} 4 0
+	{f012} 4 0
+	{f013} 4 0
+	{f014} 4 50
+	{f015} 4 1
+	{f016} 4 0
+	{f017} 4 0
+	{_eof}
+}
+# TekiInfo
+{
+	3
+	Kochappy	100
+	0
+	Hana_key	10
+	1
+	Wtank	20
+	1
+}
+# ItemInfo
+{
+	8
+	suit_fire	10
+	donutswhite	10
+	toy_ring_b_red	10
+	gum_tape_s	10
+	compact	10
+	g_futa_kyodo	10
+	kan_b_gold	10
+	donutswhite	10
+}
+# GateInfo
+{
+	0
+}
+# FloorInfo
+{
+	{f000} 4 5
+	{f001} 4 5
+	{f002} 4 100
+	{f003} 4 8
+	{f004} 4 100
+	{f005} 4 3
+	{f006} 4 0.01
+	{f007} 4 0
+	{f008} -1 1_units_nobo2_metal.txt
+	{f009} -1 sniper_light_lv0.ini
+	{f00A} -1 test
+	{f010} 4 0
+	{f011} 4 0
+	{f012} 4 0
+	{f013} 4 0
+	{f014} 4 50
+	{f015} 4 1
+	{f016} 4 0
+	{f017} 4 0
+	{_eof}
+}
+# TekiInfo
+{
+	3
+	UjiA	120
+	0
+	Fkabuto_key	10
+	1
+	Frog	30
+	1
+}
+# ItemInfo
+{
+	8
+	ichigo_l	10
+	sinkukan_b	10
+	kuri	10
+	baum_kuchen_s	10
+	tape_blue	10
+	donutsichigo	10
+	bane_yellow	10
+	juji_key_fc	10
+}
+# GateInfo
+{
+	0
+}
+# FloorInfo
+{
+	{f000} 4 6
+	{f001} 4 6
+	{f002} 4 100
+	{f003} 4 8
+	{f004} 4 100
+	{f005} 4 3
+	{f006} 4 0.01
+	{f007} 4 0
+	{f008} -1 1_units_cent_tsuchi.txt
+	{f009} -1 hiroba_light.ini
+	{f00A} -1 test
+	{f010} 4 0
+	{f011} 4 0
+	{f012} 4 0
+	{f013} 4 0
+	{f014} 4 50
+	{f015} 4 1
+	{f016} 4 0
+	{f017} 4 0
+	{_eof}
+}
+# TekiInfo
+{
+	3
+	Tadpole	140
+	0
+	MaroFrog_key	10
+	1
+	Kabuto	40
+	1
+}
+# ItemInfo
+{
+	8
+	chess_queen_black	10
+	bell	10
+	nut	10
+	denchi_1_black	10
+	denchi_2_black	10
+	futa_a_gold	10
+	loozy	10
+	chocoichigo	10
+}
+# GateInfo
+{
+	0
+}
+# FloorInfo
+{
+	{f000} 4 7
+	{f001} 4 7
+	{f002} 4 100
+	{f003} 4 8
+	{f004} 4 100
+	{f005} 4 3
+	{f006} 4 0.01
+	{f007} 4 0
+	{f008} -1 vs_8_spiral_conc.txt
+	{f009} -1 metal_light_lv2.ini
+	{f00A} -1 test
+	{f010} 4 0
+	{f011} 4 0
+	{f012} 4 0
+	{f013} 4 0
+	{f014} 4 50
+	{f015} 4 1
+	{f016} 4 0
+	{f017} 4 0
+	{_eof}
+}
+# TekiInfo
+{
+	3
+	TamagoMushi	160
+	0
+	Error_key	10
+	1
+	Error	10
+	1
+}
+# ItemInfo
+{
+	8
+	donguri_l	10
+	suit_powerup	10
+	radar_b	10
+	be_dama_red_l	10
+	bane_blue	10
+	donguri_l	10
+	donutschoco_s	10
+	j_block_green	10
+}
+# GateInfo
+{
+	0
+}
+# FloorInfo
+{
+	{f000} 4 8
+	{f001} 4 8
+	{f002} 4 100
+	{f003} 4 8
+	{f004} 4 100
+	{f005} 4 3
+	{f006} 4 0.01
+	{f007} 4 0
+	{f008} -1 1_units_mid2_snow.txt
+	{f009} -1 chikahimi_metal_light_lv4.ini
+	{f00A} -1 test
+	{f010} 4 0
+	{f011} 4 0
+	{f012} 4 0
+	{f013} 4 0
+	{f014} 4 50
+	{f015} 4 1
+	{f016} 4 0
+	{f017} 4 0
+	{_eof}
+}
+# TekiInfo
+{
+	3
+	Tank	60
+	0
+	Error_key	10
+	1
+	Error	20
+	1
+}
+# ItemInfo
+{
+	8
+	toy_ring_b_green	10
+	leaf_yellow	10
+	bane_yellow	10
+	mojiban	10
+	kinoko_tubu	10
+	uji_jisyaku	10
+	denchi_3_red	10
+	tape_yellow	10
+}
+# GateInfo
+{
+	0
+}
+# FloorInfo
+{
+	{f000} 4 9
+	{f001} 4 9
+	{f002} 4 100
+	{f003} 4 8
+	{f004} 4 100
+	{f005} 4 3
+	{f006} 4 0.01
+	{f007} 4 0
+	{f008} -1 vs_6_nobo_metal.txt
+	{f009} -1 hiroba_light.ini
+	{f00A} -1 test
+	{f010} 4 0
+	{f011} 4 0
+	{f012} 4 0
+	{f013} 4 0
+	{f014} 4 50
+	{f015} 4 1
+	{f016} 4 0
+	{f017} 4 0
+	{_eof}
+}
+# TekiInfo
+{
+	3
+	Kurage	80
+	0
+	Error_key	10
+	1
+	Error	30
+	1
+}
+# ItemInfo
+{
+	8
+	toy_ring_b_red	10
+	cookie_u	10
+	teala_dia_b	10
+	water	10
+	denchi_2_red	10
+	baum_kuchen_s	10
+	diamond_green_l	10
+	g_futa_sakotani	10
+}
+# GateInfo
+{
+	0
+}
+ 

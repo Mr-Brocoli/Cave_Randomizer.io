@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang = "en-us">
+
+<head>
+<meta charset="utf-8" />
+<title>Number Guess - Lesson 1</title>
+<meta name="description" content="Number Guess - Lesson 1. Version 1.0" />
+<meta name="author" content="The Gamer's Guide to Coding" />
+<meta name="dcterms.rights" content="https://creativecommons.org/licenses/by-sa/4.0/" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="included.js"></script>
+<script src="./FileSaver.js-master/dist/FileSaver.js"</script>
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+  <script src="./DefaultTreasures.js"></script>
+  <link rel="shortcut icon" href="https://material.io/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+  <link rel="stylesheet" href="bundle-home.css">
+</head>
+<style>
+.multiselect {
+  width: 350px;
+}
+
+.selectBox {
+  position: relative;
+  width: 350px;
+}
+
+.selectBox select {
+  width: 100%;
+  font-weight: bold;
+}
+
+.overSelect {
+  position: absolute;
+  width: 350px
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+#checkboxes {
+  display: none;
+  border: 1px #dadada solid;
+}
+
+#checkboxes label {
+  display: block;
+}
+
+#checkboxes label:hover {
+  background-color: #1e90ff;
+}
+#DisplayCaveInfo {
+     white-space: pre;
+     color: black;
+   }
+.full-height {
+  height: 130000%;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+}
+#yellowbackground {
+     width: max-width;
+     background-color: #d7ff00ff;
+     opacity: 1.0;
+     font-size: 36px;
+     overflow: hidden;
+     z-index: -100;
+     position:relative;
+   }
+.ErrorText {
+        width: 330px;
+        background-color: #ff0000;
+        opacity: 0.0;
+        font-size: 18px;
+        overflow: hidden;
+        z-index: 100;
+        position:relative;
+      }
+</style>
+
+<body onload="CreateCheckBoxCaveUnits(); IsUseDefaultSettings();" on>
+  <form style="position:absolute; opacity: 0;">
+    <div class="multiselect">
+      <div class="selectBox" onclick="showCheckboxes()">
+        <select disabled>
+          <option id="Display Select">No Cave Units Yet</option>
+        </select>
+        <div class="overSelect"></div>
+      </div>
+      <div id="checkboxes">
+  <!--     this is where the CaveInfoStrings go
+      <label for="one">
+       <input type="checkbox" id="one" />First checkbox</label> -->
+      </div>
+    </div>
+  </form>
+
+<input id="UserInputFloorNum" class="number-limited" type="number" value="1" min="1" max="500" style="position:absolute; margin-top: 150px; margin-left:400px" />
+<input id="MakeCaveInfo" type="button" value="Create a New Cave!" onclick="MakeCaveInfo();" style="position:absolute; margin-top: 175px; margin-left:400px" />
+<button onclick="copyElementText('DisplayCaveInfo')" style="position:absolute; margin-top: 175px; margin-left:550px" >Copy New Cave to Clipboard!</button>
+<p id="ErrorFloorNum" class="ErrorText" style="position:absolute; margin-top: 151px; margin-left:490px">The number of Floors can only be 1 to 500</p>
+<p style="position:absolute; margin-top: 130px; margin-left:400px">Number of Floors</p>
+
+<p id="ChungusNotFunny" style="position:absolute; margin-top: 10000px; margin-left:0px">Big chungus is not funny</p>
+<p id="DisplayCaveInfo" style="position:absolute; margin-top: 200px; margin-left:400px">nuttin yet</p>
+<!-- background stuff -->
+<p style="position:absolute; margin-top: 170px; margin-left: 50px;"><a href="./HTMLS/CaveParms.html">Cave Generation Parameters</a></p>
+<p style="position:absolute; margin-top: 200px; margin-left: 50px;"><a href="./HTMLS/NewTreasure.html">Treasure List Configuration</a></p>
+<p id="yellowbackground" class="full-height" style="margin-top: 0px; margin-left:0px;">Welcome to Mr. Brocoli's Cave Randomiser website! To Change the settings of the
+cave randomiser click on the blue text! </p>
+<script>
+document.querySelector('.number-limited').addEventListener('input', function(e){
+  InputNumberLimit(e);
+});
+</script>
+<script language="javascript" type="text/javascript">
+
+function save()
+{
+val = document.myform.text_area.value;
+mydoc = document.open();
+mydoc.write(val);
+mydoc.execCommand("saveAs",true,".txt"); //you can change the .txt to your extention
+history.go(-1);
+}
+
+</script>
+</head>
+</body>
+<form name="myform">
+<input type="button" onClick="save();" value="Save">
+<br>
+<textarea name="text_area" id="text_area_id" rows="14" cols="40"></textarea>
+</form>
+
+</body>
+
+</html>
